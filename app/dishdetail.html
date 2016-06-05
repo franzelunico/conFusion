@@ -43,7 +43,12 @@
                 </div>
             </div>
             <div class="col-xs-9 col-xs-offset-1">
-                <blockquote ng-repeat="comment in dishDetailCtrl.dish.comments">
+                <h3>Customer Comments
+                    <small>  Sort by:
+                        <input ng-model="dishDetailCtrl.filtText" type="text" ng-change="changeHandler()" placeholder="Search for...">
+                    </small>
+                </h3>
+                <blockquote ng-repeat="comment in dishDetailCtrl.dish.comments | orderBy: dishDetailCtrl.getOrder()">
                     <p>{{comment.rating}} Starts</p>
                     <p>{{comment.comment}}</p>
                     <footer>{{comment.author}}, <cite title="Source Title">{{comment.date | date:'MMM, dd, yyyy' }}</cite></footer>
@@ -101,7 +106,18 @@
                     };
             
             this.dish = dish;
-            
+            this.filtText = '';
+            this.getOrder = function(){
+                    list_order = ["author","date","rating","-author","-date","-rating"]
+                    found = "";
+                    var a = list_order.indexOf(this.filtText);
+                    if(a > -1){
+                        found= list_order[a];
+                    }else{
+                        found= "";
+                    }
+                    return found;
+            }
         });
 
     </script>
