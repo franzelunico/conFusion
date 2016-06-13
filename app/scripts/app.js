@@ -68,13 +68,12 @@ angular.module('confusionApp', [])
         .controller('DishCommentController', ['$scope', function($scope) {
             $scope.submitComment = function() {
 
-                $scope.newComment.date=new Date();
                 console.log($scope.newComment);
 
-                if ( ($scope.newComment.comment === "") || $scope.newComment.author ==="") {
+                if ( ($scope.newComment.comment !== "") && $scope.newComment.author !== "") {
                     console.log('incorrect');
-                }
-                else {
+                    $scope.newComment.date=new Date();
+                    $scope.dish.comments.push($scope.newComment);
                     $scope.commentForm.$setPristine();
 
                     $scope.newComment = {
