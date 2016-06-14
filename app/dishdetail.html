@@ -49,7 +49,7 @@
                         <input ng-model="$parent.filtText" type="text" ng-change="changeHandler()" placeholder="Search for...">
                     </small>
                 </h3>
-                <blockquote ng-repeat="comment in $parent.dish.comments | orderBy: $parent.getOrder()" /parent>
+                <blockquote ng-repeat="comment in dish.comments | orderBy: getOrder()" /parent>
                     <p>{{comment.rating}} Starts</p>
                     <p>{{comment.comment}}</p>
                     <footer>{{comment.author}}, <cite title="Source Title">{{comment.date | date:'MMM, dd, yyyy' }}</cite></footer>
