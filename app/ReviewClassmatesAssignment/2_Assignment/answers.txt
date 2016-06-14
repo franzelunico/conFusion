@@ -1,0 +1,21 @@
+html
+The name field is appropriately set up in the form
+The name field has been appropriately bound to the JavaScript object using ng-model directive
+The comment field is appropriately set up in the form
+The comment field has been appropriately bound to the JavaScript object using ng-model directive
+The radio form field has been appropriately set up
+The radio rating field has been appropriately bound to the JavaScript object using ng-model directive and shows the current rating value.
+The submit button is appropriately included in the form
+The name field is being appropriately validated and error message being displayed.
+The comment field is being appropriately validated and error message being displayed.
+The submit button is disabled until the form is valid
+The comment preview is being displayed on top of the form using a blockquote and <li> item in the <ul>
+The comment preview is displayed only if the form is valid and the form is not pristine
+
+JS
+JavaScript object to track the information from the form has been appropriately set up.
+The date in the JavaScript object is properly set when the user submits the form.
+The comment object is being pushed to the dish.comments object array when the user submits the form
+The form is reset to pristine upon submission.
+The JavaScript object is reset to default values when the form is submitted
+
