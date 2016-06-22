@@ -39,9 +39,9 @@
                 <ul class="list-unstyled">
                     <li>
                         <blockquote ng-show="commentForm.$valid && !commentForm.$pristine">
-                            <p>{{newComment.rating}} Starts</p>
-                            <p>{{newComment.comment}}</p>
-                            <footer>{{newComment.author}}, <cite title="Source Title">{{comment.date | date:'MMM, dd, yyyy' }}</cite></footer>
+                            <p>{{mycomment.rating}} Starts</p>
+                            <p>{{mycomment.comment}}</p>
+                            <footer>{{mycomment.author}}, <cite title="Source Title">{{comment.date | date:'MMM, dd, yyyy' }}</cite></footer>
                         </blockquote role>
                     </li>
                 </ul>
@@ -51,20 +51,20 @@
                         <label for="yourname" class="col-sm-2 control-label">Your Name</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="yourname" name="yourname" placeholder="Enter Your Name"
-                                                                                                  ng-model="newComment.author" required>
+                                                                                                  ng-model="mycomment.author" required>
                             <span ng-show="commentForm.yourname.$error.required && !commentForm.yourname.$pristine" class="help-block">Your name is required.</span>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="lastname" class="col-sm-2 control-label">Number of Stars</label>
                         <label class="radio-inline" ng-repeat="i in [1, 2, 3, 4, 5]">
-                            <input type="radio" ng-model="newComment.rating" ng-value="i" ng-checked="checked" > {{ i }} 
+                            <input type="radio" ng-model="mycomment.rating" ng-value="i" ng-checked="checked" > {{ i }} 
                         </label>
                     </div>
                     <div class="form-group" ng-class="{'has-error' : commentForm.newcomment.$error.required && !commentForm.newcomment.$pristine}">
                         <label for="newcomment" class="col-sm-2 control-label">Your Comments</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control" id="newcomment" name="newcomment" rows="12" ng-model="newComment.comment" required></textarea>
+                            <textarea class="form-control" id="newcomment" name="newcomment" rows="12" ng-model="mycomment.comment" required></textarea>
                             <span ng-show="commentForm.newcomment.$error.required && !commentForm.newcomment.$pristine" class="help-block">Your comments are required.</span>
                         </div>
                     </div>
