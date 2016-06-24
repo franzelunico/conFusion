@@ -1,0 +1,6 @@
+bower install angular-route -S
+npm install json-server -g
+npm install karma-cli -g
+npm install phantomjs-prebuilt --save-dev
+npm install karma-jasmine --save-dev  # destro test
+bower install angular-mocks -S # destro test
