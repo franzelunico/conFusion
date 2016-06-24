@@ -3,6 +3,11 @@ describe('Controller: MenuController', function () {
   // load the controller's module
   beforeEach(module('confusionApp'));
 
+  beforeEach(module(function ($urlRouterProvider) {
+          $urlRouterProvider.otherwise(function(){return false;});
+  }));
+
+
   var MenuController, scope, $httpBackend;
 
   // Initialize the controller and a mock scope
