@@ -9,7 +9,8 @@ module.exports = function(config) {
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
-    // list of files / patterns to load in the browser
+	
+	// list of files / patterns to load in the browser
     files: [
       'bower_components/angular/angular.js',
       'bower_components/angular-resource/angular-resource.js',
@@ -24,7 +25,7 @@ module.exports = function(config) {
     'test/protractor.conf.js', 'test/e2e/*.js'
     ],
 
-    // preprocess matching files before serving them to the browser
+	// preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
     },
@@ -46,10 +47,10 @@ module.exports = function(config) {
 
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
-
-    // start these browsers
+	
+	// start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome','PhantomJS', 'PhantomJS_custom'],
+     browsers: ['Chrome','PhantomJS', 'PhantomJS_custom'],
 
     // you can define custom flags
     customLaunchers: {
@@ -78,5 +79,7 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
+
   })
 }
+
