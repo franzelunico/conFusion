@@ -92,18 +92,7 @@ angular.module('confusionApp')
                     }
             );
 
-            $scope.filtText = '';
-            $scope.getOrder = function(){
-                var list_order = ["author","date","rating","-author","-date","-rating"];
-                var found = "";
-                var a = list_order.indexOf($scope.filtText);
-                if(a > -1){
-                    found= list_order[a];
-                }else{
-                    found= "";
-                }
-                return found;
-            };
+            $scope.orderText = '';
 
         }])
 

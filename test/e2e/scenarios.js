@@ -15,8 +15,7 @@ describe('conFusion App E2E Testing', function() {
         });
 
         it('should have a title', function() {
-            expect(browser.getTitle()).
-                toEqual('Ristorante Con Fusion');
+            expect(browser.getTitle()).toEqual('Ristorante Con Fusion');
         });
     });
     describe('menu 0 item', function() {
@@ -25,8 +24,7 @@ describe('conFusion App E2E Testing', function() {
         });
         it('should have a name', function() {
             var name = element(by.binding('dish.name'));
-            expect(name.getText()).
-                toEqual('Uthapizza Hot $4.99');
+            expect(name.getText()).toEqual('Uthapizza Hot $4.99');
         });
         it('should show the number of comments as', function() {
             expect(element.all(by.repeater('comment in dish.comments'))
