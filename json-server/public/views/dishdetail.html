@@ -27,10 +27,10 @@
             <div class="col-xs-9 col-xs-offset-1" ng-controller="DishCommentController">
                 <h3>Customer Comments
                     <small>  Sort by:
-                        <input ng-model="$parent.filtText" type="text" ng-change="changeHandler()" placeholder="Search for...">
+                        <input ng-model="orderText" type="text" ng-change="changeHandler()" placeholder="Search for...">
                     </small>
                 </h3>
-                <blockquote ng-repeat="comment in dish.comments | orderBy: getOrder()" /parent>
+                <blockquote ng-repeat="comment in dish.comments | orderBy: orderText" /parent>
                     <p>{{comment.rating}} Starts</p>
                     <p>{{comment.comment}}</p>
                     <footer>{{comment.author}}, <cite title="Source Title">{{comment.date | date:'MMM, dd, yyyy' }}</cite></footer>
