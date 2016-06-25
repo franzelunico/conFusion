@@ -28,9 +28,10 @@
     "angular-route": "^1.5.7",
     "angular-ui-router": "^0.3.1",
     "angular-resource": "^1.5.7",
-    "angular-mocks": "1.4.11"
+    "angular-mocks": "1.4.12"
   },
   "resolutions": {
-    "angular": "~1.4.7"
+    "angular": "~1.4.7",
+    "angular-mocks": "1.4.11"
   }
 }
